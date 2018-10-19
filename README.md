@@ -8,3 +8,4 @@ Collection of CLI commands to manage config. Use the module to mixin commands ad
 npm install
 node sample/Sample.s
 ```
+

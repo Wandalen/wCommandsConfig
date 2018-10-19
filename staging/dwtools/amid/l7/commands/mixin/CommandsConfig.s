@@ -175,7 +175,7 @@ function commandConfigDefine( e )
 
   debugger;
   let storage = self.storageToSave({});
-  storage = _.mapExtend( storage, e.propertiesMap );
+  storage = _.mapExtend( null, storage, e.propertiesMap );
   self.storageLoaded({ storage : storage });
 
   self.sessionSave();

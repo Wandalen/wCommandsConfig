@@ -26,7 +26,7 @@ if( typeof module !== 'undefined' )
 
   _.include( 'wTesting' );
 
-  require( '../l7/CommandsConfig.s' );
+  require( '../../l7/commands/mixin/CommandsConfig.s' );
 
 }
 
@@ -41,55 +41,60 @@ var _ = _global_.wTools;
 function trivial( test )
 {
 
-  var executed1 = 0;
+  /**/
+
+  function SampleClass()
+  {
+    return _.instanceConstructor( SampleClass, this, arguments );
+  }
+
   function executable1( e )
   {
-    executed1 = 1;
-    console.log( 'Executable1' );
+    console.log( 'executable1' );
   }
 
-  var Commands =
+  function exec()
   {
-    'action1' : { e : executable1, h : 'Some action' },
-    'action2' : 'Action2.s',
-    'action3' : 'Action3.s',
+
+    let Commands =
+    {
+      'action first' : { e : executable1, h : 'Some action' },
+    }
+
+    let ca = _.CommandsAggregator
+    ({
+      basePath : __dirname,
+      commands : Commands,
+      commandPrefix : 'node ',
+    });
+
+    this._commandsConfigAdd( ca );
+
+    ca.form();
+    ca.exec();
+
+    test.is( _.routineIs( this.commandConfigDefine ) );
+    test.is( Object.keys( ca.vocabulary.descriptorMap ).length > 5 );
+
   }
 
-  var ca = _.CommandsAggregator
+  let Extend =
+  {
+    exec : exec,
+  }
+
+  _.classDeclare
   ({
-    basePath : __dirname,
-    commands : Commands,
-    commandPrefix : 'node ',
-  }).form();
+    cls : SampleClass,
+    extend : Extend,
+  });
 
-  var appArgs = Object.create( null );
-  appArgs.subject = 'action1';
-  appArgs.map = {};
-  ca.proceedApplicationArguments({ appArgs : appArgs });
-  test.identical( executed1,1 );
+  _.Copyable.mixin( SampleClass );
+  _.CommandsConfig.mixin( SampleClass );
 
-  var appArgs = Object.create( null );
-  appArgs.subject = 'help';
-  appArgs.map = {};
-  ca.proceedApplicationArguments({ appArgs : appArgs });
-  test.identical( executed1,1 );
+  let sample = new SampleClass();
+  sample.exec();
 
-  var appArgs = Object.create( null );
-  appArgs.map = {};
-  appArgs.subject = 'action2';
-
-  return ca.proceedApplicationArguments({ appArgs : appArgs })
-  .doThen( function( err, arg )
-  {
-    test.is( !err );
-    test.is( !!arg );
-    var appArgs = Object.create( null );
-    appArgs.map = {};
-    appArgs.subject = 'action3';
-    return ca.proceedApplicationArguments({ appArgs : appArgs });
-  })
-
-  return result;
 }
 
 // --
@@ -99,7 +104,7 @@ function trivial( test )
 var Self =
 {
 
-  name : 'Tools/mid/CommandsAggregator',
+  name : 'Tools/mid/CommandsConfig',
   silencing : 1,
 
   tests :

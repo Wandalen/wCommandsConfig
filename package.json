@@ -1,4 +1,3 @@
-
 {
   "name": "wcommandsconfig",
   "version": "0.3.0",
@@ -22,7 +21,8 @@
     "url": "https://github.com/Wandalen/wCommandsConfig/issues"
   },
   "dependencies": {
-    "wTools": ""
+    "wTools": "",
+    "wcommandsaggregator": ""
   },
   "devDependencies": {
     "wTesting": "",

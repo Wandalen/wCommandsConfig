@@ -4,22 +4,51 @@ require( 'wcommandsconfig' );
 
 /**/
 
+function SampleClass()
+{
+  return _.instanceConstructor( SampleClass, this, arguments );
+}
+
 function executable1( e )
 {
   console.log( 'executable1' );
 }
 
-var Commands =
+function exec()
 {
-  'action first' : { e : executable1, h : 'Some action' },
-  'action second' : 'Action2.s',
+
+  let Commands =
+  {
+    'action first' : { e : executable1, h : 'Some action' },
+  }
+
+  let ca = _.CommandsAggregator
+  ({
+    basePath : __dirname,
+    commands : Commands,
+    commandPrefix : 'node ',
+  });
+
+  this._commandsConfigAdd( ca );
+
+  ca.form();
+  ca.exec();
+
 }
 
-var ca = _.CommandsAggregator
-({
-  basePath : __dirname,
-  commands : Commands,
-  commandPrefix : 'node ',
-}).form();
+let Extend =
+{
+  exec : exec,
+}
 
-ca.exec();
+_.classDeclare
+({
+  cls : SampleClass,
+  extend : Extend,
+});
+
+_.Copyable.mixin( SampleClass );
+_.CommandsConfig.mixin( SampleClass );
+
+let sample = new SampleClass();
+sample.exec();

@@ -85,7 +85,7 @@ function _commandConfigWill( e )
 
   _.assert( _.instanceIs( self ) );
   _.assert( arguments.length === 0 );
-  _.assert( self.opened !== undefined );
+  _.assert( self.opened !== undefined, 'Expects field {-opened-}' );
 
   // if( !self.formed )
   // self.form();

@@ -90,8 +90,16 @@ function _commandConfigWill( e )
   // if( !self.formed )
   // self.form();
 
-  if( !self.opened )
-  self.sessionOpen();
+  // if( !self.opened )
+  // {
+  //   let storageFilePath = self.storageFilePathToLoadGet();
+  //   if( storageFilePath === null )
+  //   {
+  //     logger.log( 'No storage to load at', path.current() );
+  //     return;
+  //   }
+  //   self.sessionOpen();
+  // }
 
   let storage = self.storageToSave({});
   logger.log( _.toStr( storage, { wrap : 0, multiline : 1, levels : 2 } ) );
@@ -119,13 +127,21 @@ function commandConfigRead( e )
 {
   let self = this;
   let fileProvider = self.fileProvider;
+  let path = fileProvider.path;
   let logger = self.logger || _global_.logger;
 
   _.assert( _.instanceIs( self ) );
   _.assert( arguments.length === 1 );
   _.assert( self.opened !== undefined );
 
-  let read = self._storageFilesRead({ storageFilePath : self.storageFilePathToLoadGet() });
+  let storageFilePath = self.storageFilePathToLoadGet();
+  if( storageFilePath === null )
+  {
+    logger.log( 'No storage to load at', path.current() );
+    return;
+  }
+
+  let read = self._storageFilesRead({ storageFilePath : storageFilePath });
 
   logger.log( 'Storage' );
   logger.up();
@@ -138,8 +154,8 @@ function commandConfigRead( e )
   }
   logger.down();
 
-  if( !self.opened )
-  self.sessionOpen();
+  // if( !self.opened )
+  // self.sessionOpen();
 
   return self;
 }
@@ -205,16 +221,28 @@ function commandConfigClear( e )
   _.assert( _.instanceIs( self ) );
   _.assert( arguments.length === 1 );
 
-  self.sessionPrepare();
+  if( _.mapKeys( e.propertiesMap ).length )
+  {
 
-  debugger;
-  let storage = self.storageToSave({});
-  _.mapDelete( storage, _.mapKeys( e.propertiesMap ).length ? e.propertiesMap : undefined );
-  debugger;
-  self.storageLoaded({ storage : storage });
-  self.sessionSave();
+    self.sessionPrepare();
+    let storage = self.storageToSave({});
+    _.mapDelete( storage, e.propertiesMap );
+    self.storageLoaded({ storage : storage });
+    self.sessionSave();
+    self._commandConfigWill();
 
-  self._commandConfigWill();
+  }
+  else
+  {
+
+    fileProvider.fileDelete
+    ({
+      filePath : self.storagePathGet().storageFilePath,
+      verbosity : 3,
+      throwing : 0,
+    });
+
+  }
 
   return self;
 }

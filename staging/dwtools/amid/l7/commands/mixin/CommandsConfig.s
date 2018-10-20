@@ -62,12 +62,12 @@ function _commandsConfigAdd( ca )
 
   let commands =
   {
-    'config will' :            { e : self.commandConfigWill.bind( self ), h : 'Print config which is going to be saved' },
-    'config read' :            { e : self.commandConfigRead.bind( self ), h : 'Print content of config files' },
-    'config define' :          { e : self.commandConfigDefine.bind( self ), h : 'Define config fields' },
-    'config append' :          { e : self.commandConfigAppend.bind( self ), h : 'Define config fields appending them' },
-    'config clear' :           { e : self.commandConfigClear.bind( self ), h : 'Clear config fields' },
-    'config default' :         { e : self.commandConfigDefault.bind( self ), h : 'Set config to default' },
+    'config will' :            { e : _.routineJoin( self, self.commandConfigWill ), h : 'Print config which is going to be saved' },
+    'config read' :            { e : _.routineJoin( self, self.commandConfigRead ), h : 'Print content of config files' },
+    'config define' :          { e : _.routineJoin( self, self.commandConfigDefine ), h : 'Define config fields' },
+    'config append' :          { e : _.routineJoin( self, self.commandConfigAppend ), h : 'Define config fields appending them' },
+    'config clear' :           { e : _.routineJoin( self, self.commandConfigClear ), h : 'Clear config fields' },
+    'config default' :         { e : _.routineJoin( self, self.commandConfigDefault ), h : 'Set config to default' },
   }
 
   ca.commandsAdd( commands );
@@ -171,7 +171,7 @@ function commandConfigDefine( e )
   _.assert( _.instanceIs( self ) );
   _.assert( arguments.length === 1 );
 
-  self.sessionPrepare();
+  self.sessionOpenOrCreate();
 
   debugger;
   let storage = self.storageToSave({});
@@ -196,7 +196,7 @@ function commandConfigAppend( e )
   _.assert( _.instanceIs( self ) );
   _.assert( arguments.length === 1 );
 
-  self.sessionPrepare();
+  self.sessionOpenOrCreate();
 
   debugger;
   let storage = self.storageToSave({});
@@ -224,7 +224,7 @@ function commandConfigClear( e )
   if( _.mapKeys( e.propertiesMap ).length )
   {
 
-    self.sessionPrepare();
+    self.sessionOpenOrCreate();
     let storage = self.storageToSave({});
     _.mapDelete( storage, e.propertiesMap );
     self.storageLoaded({ storage : storage });
@@ -258,8 +258,8 @@ function commandConfigDefault( e )
   _.assert( _.instanceIs( self ) );
   _.assert( arguments.length === 1 );
 
-  self.sessionPrepare();
-
+  // self.sessionOpenOrCreate();
+  self.sessionCreate();
   let storage = self.storageDefaultGet();
   self.storageLoaded( storage );
   self.sessionSave();

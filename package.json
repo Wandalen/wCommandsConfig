@@ -4,14 +4,14 @@
   "description": "Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.",
   "author": "Kostiantyn Wandalen <wanalen@willbe.so>",
   "license": "MIT",
-  "main": "staging/dwtools/amid/l7/commands/mixin/CommandsConfig.s",
+  "main": "proto/dwtools/amid/l7/commands/mixin/CommandsConfig.s",
   "files": [
-    "staging/dwtools/amid/l7/commands",
+    "proto/dwtools/amid/l7/commands",
     "production"
   ],
   "scripts": {
     "test": "wtest staging",
-    "make_doc": "./doc.sh"
+    "docgen": "wdocgen proto"
   },
   "repository": {
     "type": "git",

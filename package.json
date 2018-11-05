@@ -7,7 +7,7 @@
   "main": "proto/dwtools/amid/l7/commands/mixin/CommandsConfig.s",
   "files": [
     "proto/dwtools/amid/l7/commands",
-    "production"
+    "proto/dwtools/Tools.s", "production"
   ],
   "scripts": {
     "test": "wtest staging",

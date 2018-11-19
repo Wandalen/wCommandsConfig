@@ -13,24 +13,7 @@
 if( typeof module !== 'undefined' )
 {
 
-  if( typeof _global_ === 'undefined' || !_global_.wBase )
-  {
-    let toolsPath = '../../../../dwtools/Base.s';
-    let toolsExternal = 0;
-    try
-    {
-      toolsPath = require.resolve( toolsPath );
-    }
-    catch( err )
-    {
-      toolsExternal = 1;
-      require( 'wTools' );
-    }
-    if( !toolsExternal )
-    require( toolsPath );
-  }
-
-  let _ = _global_.wTools;
+  let _ = require( '../../../../Tools.s' );
 
   _.include( 'wProto' );
   _.include( 'wCommandsAggregator' );
@@ -349,9 +332,9 @@ _.classDeclare
 
 _global_[ Self.name ] = _[ Self.shortName ] = Self;
 
-if( typeof module !== 'undefined' )
-if( _global_.WTOOLS_PRIVATE )
-{ /* delete require.cache[ module.id ]; */ }
+// if( typeof module !== 'undefined' )
+// if( _global_.WTOOLS_PRIVATE )
+// { /* delete require.cache[ module.id ]; */ }
 
 if( typeof module !== 'undefined' && module !== null )
 module[ 'exports' ] = Self;

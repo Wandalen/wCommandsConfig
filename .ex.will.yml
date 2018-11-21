@@ -2,8 +2,8 @@
 about :
 
   name : wCommandsConfig
-  description : Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.
-  version : 0.3.16
+  description : 'Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.'
+  version : 0.3.17
   enabled : 1
   interpreters :
   - nodejs >= 6.0.0

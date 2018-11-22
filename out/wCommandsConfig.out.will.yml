@@ -4,7 +4,7 @@ about:
   description: >-
     Collection of CLI commands to manage config. Use the module to mixin
     commands add/remove/delete/set to a class.
-  version: 0.3.17
+  version: 0.3.18
   enabled: 1
   interpreters:
     - nodejs >= 6.0.0
@@ -83,7 +83,7 @@ path:
 submodule: {}
 reflector:
   reflect.proto.0:
-    reflectMap:
+    filePath:
       ./proto: ./out.release
     srcFilter:
       maskAll:
@@ -107,7 +107,7 @@ reflector:
     inherit:
       - predefined.*
   reflect.proto.1:
-    reflectMap:
+    filePath:
       ./proto: ./out.debug
     srcFilter:
       maskAll:
@@ -153,15 +153,14 @@ reflector:
     inherit:
       - predefined.*
   exported.0:
-    reflectMap:
-      ./proto: true
+    filePath: ./proto
     srcFilter:
       prefixPath: .
     dstFilter:
       prefixPath: .
   exportedFiles.0:
     recursive: 0
-    reflectMap:
+    filePath:
       ./dwtools/Tools.s: true
       ./dwtools/amid/l7/commands/mixin/CommandsConfig.s: true
       ./dwtools/amid/l7.test/commands/CommandsAggregator.test.s: true
@@ -272,7 +271,7 @@ build:
       - 'step::export.proto'
 exported:
   proto.export:
-    version: 0.3.17
+    version: 0.3.18
     criterion:
       default: 1
       debug: 1

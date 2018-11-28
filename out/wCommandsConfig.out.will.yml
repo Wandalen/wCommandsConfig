@@ -165,8 +165,8 @@ reflector:
       ./dwtools/amid/l7/commands/mixin/CommandsConfig.s: true
       ./dwtools/amid/l7.test/commands/CommandsAggregator.test.s: true
     srcFilter:
-      basePath: ./proto
-      prefixPath: .
+      basePath: .
+      prefixPath: proto
     dstFilter:
       basePath: .
       prefixPath: .

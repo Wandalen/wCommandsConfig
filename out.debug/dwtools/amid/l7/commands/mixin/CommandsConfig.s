@@ -3,7 +3,8 @@
 'use strict';
 
 /**
-  @module Tools/mid/CommandsConfig - Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.
+ * Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.
+  @module Tools/mid/CommandsConfig
 */
 
 /**

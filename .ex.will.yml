@@ -21,8 +21,8 @@ execution :
 
 path :
 
-  repository : git+https://github.com/Wandalen/wCommandsConfig.git
-  bugs : https://github.com/Wandalen/wCommandsConfig/issues
+  repository : git+https:///github.com/Wandalen/wCommandsConfig.git
+  bugs : https:///github.com/Wandalen/wCommandsConfig/issues
 
 step :
 

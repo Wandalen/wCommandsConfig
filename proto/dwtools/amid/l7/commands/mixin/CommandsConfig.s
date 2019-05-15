@@ -23,6 +23,12 @@ if( typeof module !== 'undefined' )
 
 //
 
+/**
+ * @classdesc Collection of CLI commands to manage config.
+ * @class wCommandsConfig
+ * @memberof module:Tools/mid/CommandsConfig
+*/
+
 let _global = _global_;
 let _ = _global_.wTools;
 let Parent = null;
@@ -93,6 +99,13 @@ function _commandConfigWill( e )
 
 //
 
+/**
+ * @summary Prints config which is going to be saved.
+ * @description Command: `.config.will`.
+ * @function commandConfigWill 
+ * @memberof module:Tools/mid/CommandsConfig.wCommandsConfig#
+*/
+
 function commandConfigWill( e )
 {
   let self = this;
@@ -106,6 +119,13 @@ function commandConfigWill( e )
   return self;
 }
 //
+
+/**
+ * @summary Prints content of config files. 
+ * @description Command: `.config.read`.
+ * @function commandConfigRead 
+ * @memberof module:Tools/mid/CommandsConfig.wCommandsConfig#
+*/
 
 function commandConfigRead( e )
 {
@@ -146,6 +166,13 @@ function commandConfigRead( e )
 
 //
 
+/**
+ * @summary Defines config fields.
+ * @description Command: `.config.define`. 
+ * @function commandConfigDefine 
+ * @memberof module:Tools/mid/CommandsConfig.wCommandsConfig#
+*/
+
 function commandConfigDefine( e )
 {
   let self = this;
@@ -171,6 +198,13 @@ function commandConfigDefine( e )
 
 //
 
+/**
+ * @summary Defines config fields appending them.
+ * @description Command: `.config.append`. 
+ * @function commandConfigAppend 
+ * @memberof module:Tools/mid/CommandsConfig.wCommandsConfig#
+*/
+
 function commandConfigAppend( e )
 {
   let self = this;
@@ -195,6 +229,13 @@ function commandConfigAppend( e )
 }
 
 //
+
+/**
+ * @summary Clears config fields.
+ * @description Command: `.config.clear`. 
+ * @function commandConfigClear 
+ * @memberof module:Tools/mid/CommandsConfig.wCommandsConfig#
+*/
 
 function commandConfigClear( e )
 {
@@ -232,6 +273,13 @@ function commandConfigClear( e )
 }
 
 //
+
+/**
+ * @summary Resets config to default.
+ * @description Command: `.config.default`. 
+ * @function commandConfigDefault 
+ * @memberof module:Tools/mid/CommandsConfig.wCommandsConfig#
+*/
 
 function commandConfigDefault( e )
 {

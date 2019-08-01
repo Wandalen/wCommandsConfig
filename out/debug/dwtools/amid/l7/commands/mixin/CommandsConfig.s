@@ -34,7 +34,7 @@ let _ = _global_.wTools;
 let Parent = null;
 let Self = function wCommandsConfig( o )
 {
-  return _.instanceConstructor( Self, this, arguments );
+  return _.workpiece.construct( Self, this, arguments );
 }
 
 Self.shortName = 'CommandsConfig';
@@ -102,7 +102,7 @@ function _commandConfigWill( e )
 /**
  * @summary Prints config which is going to be saved.
  * @description Command: `.config.will`.
- * @function commandConfigWill 
+ * @function commandConfigWill
  * @memberof module:Tools/mid/CommandsConfig.wCommandsConfig#
 */
 
@@ -121,9 +121,9 @@ function commandConfigWill( e )
 //
 
 /**
- * @summary Prints content of config files. 
+ * @summary Prints content of config files.
  * @description Command: `.config.read`.
- * @function commandConfigRead 
+ * @function commandConfigRead
  * @memberof module:Tools/mid/CommandsConfig.wCommandsConfig#
 */
 
@@ -168,8 +168,8 @@ function commandConfigRead( e )
 
 /**
  * @summary Defines config fields.
- * @description Command: `.config.define`. 
- * @function commandConfigDefine 
+ * @description Command: `.config.define`.
+ * @function commandConfigDefine
  * @memberof module:Tools/mid/CommandsConfig.wCommandsConfig#
 */
 
@@ -200,8 +200,8 @@ function commandConfigDefine( e )
 
 /**
  * @summary Defines config fields appending them.
- * @description Command: `.config.append`. 
- * @function commandConfigAppend 
+ * @description Command: `.config.append`.
+ * @function commandConfigAppend
  * @memberof module:Tools/mid/CommandsConfig.wCommandsConfig#
 */
 
@@ -232,8 +232,8 @@ function commandConfigAppend( e )
 
 /**
  * @summary Clears config fields.
- * @description Command: `.config.clear`. 
- * @function commandConfigClear 
+ * @description Command: `.config.clear`.
+ * @function commandConfigClear
  * @memberof module:Tools/mid/CommandsConfig.wCommandsConfig#
 */
 
@@ -276,8 +276,8 @@ function commandConfigClear( e )
 
 /**
  * @summary Resets config to default.
- * @description Command: `.config.default`. 
- * @function commandConfigDefault 
+ * @description Command: `.config.default`.
+ * @function commandConfigDefault
  * @memberof module:Tools/mid/CommandsConfig.wCommandsConfig#
 */
 

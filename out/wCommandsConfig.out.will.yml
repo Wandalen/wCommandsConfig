@@ -86,9 +86,6 @@ path:
       - ../proto/dwtools/amid/l7/commands
       - ../proto/dwtools/amid/l7/commands/mixin
       - ../proto/dwtools/amid/l7/commands/mixin/CommandsConfig.s
-      - ../proto/dwtools/amid/l7.test
-      - ../proto/dwtools/amid/l7.test/commands
-      - ../proto/dwtools/amid/l7.test/commands/CommandsAggregator.test.s
       - ../proto/dwtools/atop
 submodule: {}
 reflector:
@@ -376,9 +373,6 @@ module:
           - proto/dwtools/amid/l7/commands
           - proto/dwtools/amid/l7/commands/mixin
           - proto/dwtools/amid/l7/commands/mixin/CommandsConfig.s
-          - proto/dwtools/amid/l7.test
-          - proto/dwtools/amid/l7.test/commands
-          - proto/dwtools/amid/l7.test/commands/CommandsAggregator.test.s
           - proto/dwtools/atop
     submodule: {}
     reflector:

@@ -6,7 +6,7 @@ require( 'wcommandsconfig' );
 
 function SampleClass()
 {
-  return _.instanceConstructor( SampleClass, this, arguments );
+  return _.workpiece.construct( Self, this, arguments );
 }
 
 function executable1( e )

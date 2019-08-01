@@ -1,18 +1,17 @@
-
 {
   "name": "wcommandsconfig",
-  "version": "0.3.0",
-  "description": "___",
+  "version": "0.3.48",
+  "description": "Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.",
   "author": "Kostiantyn Wandalen <wanalen@willbe.so>",
   "license": "MIT",
-  "main": "proto/dwtools/amid/___",
+  "main": "proto/dwtools/amid/l7/commands/mixin/CommandsConfig.s",
   "files": [
-    "proto/dwtools/amid",
+    "proto/dwtools/amid/l7/commands",
     "proto/dwtools/Tools.s",
     "production"
   ],
   "scripts": {
-    "test": "wtest proto",
+    "test": "wtest .run proto/**",
     "docgen": "wdocgen proto"
   },
   "repository": {
@@ -23,7 +22,8 @@
     "url": "https://github.com/Wandalen/wCommandsConfig/issues"
   },
   "dependencies": {
-    "wTools": ""
+    "wTools": "",
+    "wcommandsaggregator": ""
   },
   "devDependencies": {
     "wTesting": ""

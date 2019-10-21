@@ -23,7 +23,7 @@ about :
 path :
 
   repository : git+https:///github.com/Wandalen/wCommandsConfig.git
-  remotes :
+  origins :
    - git+https:///github.com/Wandalen/wCommandsConfig.git
    - npm:///wcommandsconfig
   bugtracker : https:///github.com/Wandalen/wCommandsConfig/issues

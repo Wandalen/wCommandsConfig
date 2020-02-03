@@ -74,7 +74,7 @@ function _commandConfigWill( e )
   let logger = self.logger || _global_.logger;
 
   _.assert( _.instanceIs( self ) );
-  _.assert( arguments.length === 0 );
+  _.assert( arguments.length === 0, 'Expects no arguments' );
   _.assert( self.opened !== undefined, 'Expects field {-opened-}' );
 
   // if( !self.formed )

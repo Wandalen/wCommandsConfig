@@ -6,7 +6,7 @@ Collection of CLI commands to manage config. Use the module to mixin commands ad
 ## Try out
 ```
 npm install
-node sample/Sample.s
+node sample/Sample.js
 ```
 
 

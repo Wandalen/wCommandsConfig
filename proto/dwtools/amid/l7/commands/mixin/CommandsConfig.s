@@ -33,7 +33,8 @@ if( typeof module !== 'undefined' )
 let _global = _global_;
 let _ = _global_.wTools;
 let Parent = null;
-let Self = function wCommandsConfig( o )
+let Self = wCommandsConfig;
+function wCommandsConfig( o )
 {
   return _.workpiece.construct( Self, this, arguments );
 }

@@ -1,5 +1,5 @@
 
-# wCommandsConfig [![Build Status](https://travis-ci.org/Wandalen/wCommandsConfig.svg?branch=master)](https://travis-ci.org/Wandalen/wCommandsConfig)
+# module::CommandsConfig [![Status](https://github.com/Wandalen/wCommandsConfig/workflows/Test/badge.svg)](https://github.com/Wandalen/wCommandsConfig}/actions?query=workflow%3ATest)
 
 Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.
 

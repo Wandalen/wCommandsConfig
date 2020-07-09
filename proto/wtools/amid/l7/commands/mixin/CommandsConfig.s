@@ -7,14 +7,10 @@
   @module Tools/mid/CommandsConfig
 */
 
-/**
- * @file commands/CommandsConfig.s.
- */
-
 if( typeof module !== 'undefined' )
 {
 
-  let _ = require( '../../../../../dwtools/Tools.s' );
+  let _ = require( '../../../../../wtools/Tools.s' );
 
   _.include( 'wProto' );
   _.include( 'wCommandsAggregator' );
@@ -122,6 +118,7 @@ function commandConfigWill( e )
 
   return self;
 }
+
 //
 
 /**
@@ -394,10 +391,6 @@ _.classDeclare
 // --
 
 _global_[ Self.name ] = _[ Self.shortName ] = Self;
-
-// if( typeof module !== 'undefined' )
-// if( _global_.WTOOLS_PRIVATE )
-// { /* delete require.cache[ module.id ]; */ }
 
 if( typeof module !== 'undefined' )
 module[ 'exports' ] = Self;

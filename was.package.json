@@ -4,8 +4,8 @@
   "description" : "Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
-  "main" : "proto/dwtools/amid/l7/commands/mixin/CommandsConfig.s",
-  "files" : [ "proto/dwtools/amid/l7/commands", "proto/dwtools/Tools.s", "out" ],
+  "main" : "proto/wtools/amid/l7/commands/mixin/CommandsConfig.s",
+  "files" : [ "proto/wtools/amid/l7/commands", "proto/wtools/Tools.s", "out" ],
   "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen proto" },
   "repository" :
   {

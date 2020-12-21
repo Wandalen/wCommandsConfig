@@ -4,6 +4,7 @@ require( 'wcommandsconfig' );
 
 /**/
 
+let Self = SampleClass;
 function SampleClass()
 {
   return _.workpiece.construct( Self, this, arguments );
@@ -38,7 +39,7 @@ function exec()
 
 let Extend =
 {
-  exec : exec,
+  exec,
 }
 
 _.classDeclare

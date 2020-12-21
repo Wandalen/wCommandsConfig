@@ -1,4 +1,5 @@
-( function _CommandsConfig_s_() {
+( function _CommandsConfig_s_()
+{
 
 'use strict';
 
@@ -148,7 +149,7 @@ function commandConfigRead( e )
     return;
   }
 
-  let read = self._storageFilesRead({ storageFilePath : storageFilePath });
+  let read = self._storageFilesRead({ storageFilePath });
 
   logger.log( 'Storage' );
   logger.up();
@@ -192,7 +193,7 @@ function commandConfigDefine( e )
   debugger;
   let storage = self.storageToSave({});
   storage = _.mapExtend( null, storage, e.propertiesMap );
-  self.storageLoaded({ storage : storage });
+  self.storageLoaded({ storage });
 
   self.sessionSave();
 
@@ -226,7 +227,7 @@ function commandConfigAppend( e )
   debugger;
   let storage = self.storageToSave({});
   storage = _.mapExtendAppendingAnythingRecursive( storage, e.propertiesMap );
-  self.storageLoaded({ storage : storage });
+  self.storageLoaded({ storage });
 
   self.sessionSave();
 
@@ -261,7 +262,7 @@ function commandConfigClear( e )
     self.sessionOpenOrCreate();
     let storage = self.storageToSave({});
     _.mapDelete( storage, e.propertiesMap );
-    self.storageLoaded({ storage : storage });
+    self.storageLoaded({ storage });
     self.sessionSave();
     self._commandConfigWill();
 
@@ -353,25 +354,25 @@ let Accessors =
 let Supplement =
 {
 
-  _commandsConfigAdd : _commandsConfigAdd,
-  _commandConfigWill : _commandConfigWill,
+  _commandsConfigAdd,
+  _commandConfigWill,
 
-  commandConfigWill : commandConfigWill,
-  commandConfigRead : commandConfigRead,
-  commandConfigDefine : commandConfigDefine,
-  commandConfigAppend : commandConfigAppend,
-  commandConfigClear : commandConfigClear,
-  commandConfigDefault : commandConfigDefault,
+  commandConfigWill,
+  commandConfigRead,
+  commandConfigDefine,
+  commandConfigAppend,
+  commandConfigClear,
+  commandConfigDefault,
 
   //
 
-  Composes : Composes,
-  Aggregates : Aggregates,
-  Associates : Associates,
-  Restricts : Restricts,
-  Statics : Statics,
-  Forbids : Forbids,
-  Accessors : Accessors,
+  Composes,
+  Aggregates,
+  Associates,
+  Restricts,
+  Statics,
+  Forbids,
+  Accessors,
 
 }
 

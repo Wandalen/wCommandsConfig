@@ -17,6 +17,6 @@
     "url" : "https://github.com/Wandalen/wCommandsConfig/issues"
   },
   "dependencies" : { "wTools" : "", "wcommandsaggregator" : "" },
-  "devDependencies" : { "wTesting" : "" },
+  "devDependencies" : { "wTesting" : "", "eslint" : "7.1.0", "wcommandsconfig" : "file:." },
   "keywords" : [ "wTools" ]
 }

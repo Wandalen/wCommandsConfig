@@ -2,10 +2,13 @@ format: outwillfile-2.0
 root:
   - wCommandsConfig.out
 consistency:
-  ../.ex.will.yml: &ref_0
+  wCommandsConfig.out.will.yml: &ref_0
+    hash: b307e2af9c5b1a3789e6af0a4e7fb280
+    size: 38640
+  ../.ex.will.yml: &ref_1
     hash: eb4bc9f7dc70dbc7a0265797bbf34f44
     size: 1799
-  ../.im.will.yml: &ref_1
+  ../.im.will.yml: &ref_2
     hash: b9d85ecfb76d0f76918b18b2efae4a93
     size: 5177
 module:
@@ -18,18 +21,18 @@ module:
         commands add/remove/delete/set to a class.
       enabled: 1
       version: 0.4.0
-      interpreters: &ref_2
+      interpreters:
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords: &ref_3
+      keywords:
         - wTools
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: &ref_4
+      contributors:
         - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wcommandsconfig
-      npm.scripts: &ref_5
+      npm.scripts:
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -697,6 +700,24 @@ module:
           content: prime
         inherit:
           - files.transpile
+      exported.proto.export:
+        opts:
+          filePath: 'reflector::exported.proto.export'
+        criterion:
+          generated: 1
+          content: proto
+          export: 1
+        inherit:
+          - files.reflect
+      exported.files.proto.export:
+        opts:
+          filePath: 'reflector::exported.files.proto.export'
+        criterion:
+          generated: 1
+          content: proto
+          export: 1
+        inherit:
+          - files.reflect
     build:
       proto.export:
         steps:
@@ -785,8 +806,9 @@ module:
           content: proto
           export: 1
     consistency:
-      ../.ex.will.yml: *ref_0
-      ../.im.will.yml: *ref_1
+      wCommandsConfig.out.will.yml: *ref_0
+      ../.ex.will.yml: *ref_1
+      ../.im.will.yml: *ref_2
   ../:
     about:
       name: wCommandsConfig
@@ -796,13 +818,20 @@ module:
         commands add/remove/delete/set to a class.
       enabled: 1
       version: 0.4.0
-      interpreters: *ref_2
-      keywords: *ref_3
+      interpreters:
+        - njs >= 10.0.0
+        - chrome >= 60.0.0
+        - firefox >= 60.0.0
+      keywords:
+        - wTools
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: *ref_4
+      contributors:
+        - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wcommandsconfig
-      npm.scripts: *ref_5
+      npm.scripts:
+        test: wtest .run proto/**
+        docgen: wdocgen .build proto
     path:
       module.willfiles:
         criterion:
@@ -1475,3 +1504,6 @@ module:
       ../.im.will.yml:
         hash: b9d85ecfb76d0f76918b18b2efae4a93
         size: 5177
+      wCommandsConfig.out.will.yml:
+        hash: b307e2af9c5b1a3789e6af0a4e7fb280
+        size: 38640

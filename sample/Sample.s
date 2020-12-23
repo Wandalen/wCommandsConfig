@@ -33,7 +33,8 @@ function exec()
   this._commandsConfigAdd( ca );
 
   ca.form();
-  ca.exec();
+  console.log( ca.commands )
+  // ca.exec();
 
 }
 

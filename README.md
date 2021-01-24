@@ -8,7 +8,7 @@ Collection of CLI commands to manage config. Use the module to mixin commands ad
 git clone https://github.com/Wandalen/wCommandsConfig
 cd wCommandsConfig
 npm install
-node sample/Sample.s
+node sample/trivial/Sample.s
 ```
 
 ## To add to your project

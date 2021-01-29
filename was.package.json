@@ -1,6 +1,6 @@
 {
   "name" : "wcommandsconfig",
-  "version" : "0.3.217",
+  "version" : "0.3.218",
   "description" : "Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",

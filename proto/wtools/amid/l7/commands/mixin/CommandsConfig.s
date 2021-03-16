@@ -91,7 +91,7 @@ function _commandConfigWill( e )
   // }
 
   let storage = self.storageToSave({});
-  logger.log( _.toStr( storage, { wrap : 0, multiline : 1, levels : 2 } ) );
+  logger.log( _.entity.exportString( storage, { wrap : 0, multiline : 1, levels : 2 } ) );
 
   return self;
 }
@@ -157,7 +157,7 @@ function commandConfigRead( e )
   {
     logger.log( r );
     logger.up();
-    logger.log( _.toStr( read[ r ].storage, { wrap : 0, multiline : 1, levels : 2 } ) );
+    logger.log( _.entity.exportString( read[ r ].storage, { wrap : 0, multiline : 1, levels : 2 } ) );
     logger.down();
   }
   logger.down();

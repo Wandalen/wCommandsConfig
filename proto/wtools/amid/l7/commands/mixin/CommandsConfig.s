@@ -190,7 +190,6 @@ function commandConfigDefine( e )
 
   self.sessionOpenOrCreate();
 
-  debugger;
   let storage = self.storageToSave({});
   storage = _.mapExtend( null, storage, e.propertiesMap );
   self.storageLoaded({ storage });
@@ -224,7 +223,6 @@ function commandConfigAppend( e )
 
   self.sessionOpenOrCreate();
 
-  debugger;
   let storage = self.storageToSave({});
   storage = _.mapExtendAppendingAnythingRecursive( storage, e.propertiesMap );
   self.storageLoaded({ storage });

@@ -29,7 +29,7 @@ if( typeof module !== 'undefined' )
 
 const _global = _global_;
 const _ = _global_.wTools;
-let Parent = null;
+const Parent = null;
 const Self = wCommandsConfig;
 function wCommandsConfig( o )
 {

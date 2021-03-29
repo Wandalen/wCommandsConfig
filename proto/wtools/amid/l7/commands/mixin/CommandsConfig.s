@@ -69,7 +69,7 @@ function _commandsConfigAdd( ca )
 function _commandConfigWill( e )
 {
   let self = this;
-  let fileProvider = self.fileProvider;
+  const fileProvider = self.fileProvider;
   let logger = self.logger || _global_.logger;
 
   _.assert( _.instanceIs( self ) );
@@ -110,7 +110,7 @@ function _commandConfigWill( e )
 function commandConfigWill( e )
 {
   let self = this;
-  let fileProvider = self.fileProvider;
+  const fileProvider = self.fileProvider;
   let logger = self.logger || _global_.logger;
 
   _.assert( arguments.length === 1 );
@@ -134,8 +134,8 @@ function commandConfigWill( e )
 function commandConfigRead( e )
 {
   let self = this;
-  let fileProvider = self.fileProvider;
-  let path = fileProvider.path;
+  const fileProvider = self.fileProvider;
+  const path = fileProvider.path;
   let logger = self.logger || _global_.logger;
 
   _.assert( _.instanceIs( self ) );
@@ -182,7 +182,7 @@ function commandConfigRead( e )
 function commandConfigDefine( e )
 {
   let self = this;
-  let fileProvider = self.fileProvider;
+  const fileProvider = self.fileProvider;
   let logger = self.logger || _global_.logger;
 
   _.assert( _.instanceIs( self ) );
@@ -215,7 +215,7 @@ function commandConfigDefine( e )
 function commandConfigAppend( e )
 {
   let self = this;
-  let fileProvider = self.fileProvider;
+  const fileProvider = self.fileProvider;
   let logger = self.logger || _global_.logger;
 
   _.assert( _.instanceIs( self ) );
@@ -248,7 +248,7 @@ function commandConfigAppend( e )
 function commandConfigClear( e )
 {
   let self = this;
-  let fileProvider = self.fileProvider;
+  const fileProvider = self.fileProvider;
   let logger = self.logger || _global_.logger;
 
   _.assert( _.instanceIs( self ) );
@@ -294,7 +294,7 @@ function commandConfigClear( e )
 function commandConfigDefault( e )
 {
   let self = this;
-  let fileProvider = self.fileProvider;
+  const fileProvider = self.fileProvider;
   let logger = self.logger || _global_.logger;
 
   _.assert( _.instanceIs( self ) );

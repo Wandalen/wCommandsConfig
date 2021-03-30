@@ -5,7 +5,7 @@
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
   "main" : "proto/wtools/amid/l7/commands/mixin/CommandsConfig.s",
-  "files" : [ "proto/wtools/amid/l7/commands", "proto/wtools/Tools.s", "out" ],
+  "files" : [ "proto/wtools/amid/l7/commands", "proto/wtools/Tools.s", "out", "proto/node_modules" ],
   "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen proto" },
   "repository" :
   {
@@ -17,6 +17,6 @@
     "url" : "https://github.com/Wandalen/wCommandsConfig/issues"
   },
   "dependencies" : { "wTools" : "", "wcommandsaggregator" : "" },
-  "devDependencies" : { "wTesting" : "", "eslint" : "7.1.0", "wcommandsconfig" : "file:." },
+  "devDependencies" : { "wTesting" : "", "eslint" : "7.1.0" },
   "keywords" : [ "wTools" ]
 }

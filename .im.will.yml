@@ -80,9 +80,8 @@ path:
       raw: compiled
       content: prime
   npm.proto.entry:
-    - >-
-      /pro/module/wCommandsConfig/proto/wtools/amid/l7/commands/mixin/CommandsConfig.s
-    - /pro/module/wCommandsConfig/proto/node_modules/wcommandsconfig
+    - proto/wtools/amid/l7/commands/mixin/CommandsConfig.s
+    - proto/node_modules/wcommandsconfig
 reflector:
   reflect.proto:
     inherit: predefined.*

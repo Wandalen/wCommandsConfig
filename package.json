@@ -1,11 +1,11 @@
 {
   "name" : "wcommandsconfig",
-  "version" : "0.3.242",
+  "version" : "0.3.243",
   "description" : "Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
   "main" : "proto/node_modules/wcommandsconfig",
-  "files" : [ "proto/wtools/amid/l7/commands", "proto/wtools/Tools.s", "out", "proto/node_modules" ],
+  "files" : [ "proto/wtools/amid/l7/commands", "out", "proto/node_modules" ],
   "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen proto" },
   "repository" :
   {

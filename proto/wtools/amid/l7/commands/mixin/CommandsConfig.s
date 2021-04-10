@@ -51,12 +51,12 @@ function _commandsConfigAdd( ca )
 
   let commands =
   {
-    'config will' :            { e : _.routineJoin( self, self.commandConfigWill ), h : 'Print config which is going to be saved' },
-    'config read' :            { e : _.routineJoin( self, self.commandConfigRead ), h : 'Print content of config files' },
-    'config define' :          { e : _.routineJoin( self, self.commandConfigDefine ), h : 'Define config fields' },
-    'config append' :          { e : _.routineJoin( self, self.commandConfigAppend ), h : 'Define config fields appending them' },
-    'config clear' :           { e : _.routineJoin( self, self.commandConfigClear ), h : 'Clear config fields' },
-    'config default' :         { e : _.routineJoin( self, self.commandConfigDefault ), h : 'Set config to default' },
+    'config will' :            { ro : _.routineJoin( self, self.commandConfigWill ), h : 'Print config which is going to be saved' },
+    'config read' :            { ro : _.routineJoin( self, self.commandConfigRead ), h : 'Print content of config files' },
+    'config define' :          { ro : _.routineJoin( self, self.commandConfigDefine ), h : 'Define config fields' },
+    'config append' :          { ro : _.routineJoin( self, self.commandConfigAppend ), h : 'Define config fields appending them' },
+    'config clear' :           { ro : _.routineJoin( self, self.commandConfigClear ), h : 'Clear config fields' },
+    'config default' :         { ro : _.routineJoin( self, self.commandConfigDefault ), h : 'Set config to default' },
   }
 
   ca.commandsAdd( commands );

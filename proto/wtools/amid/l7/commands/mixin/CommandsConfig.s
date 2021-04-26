@@ -191,7 +191,7 @@ function commandConfigDefine( e )
   self.sessionOpenOrCreate();
 
   let storage = self.storageToSave({});
-  storage = _.mapExtend( null, storage, e.propertiesMap );
+  storage = _.props.extend( null, storage, e.propertiesMap );
   self.storageLoaded({ storage });
 
   self.sessionSave();
@@ -254,7 +254,7 @@ function commandConfigClear( e )
   _.assert( _.instanceIs( self ) );
   _.assert( arguments.length === 1 );
 
-  if( _.mapKeys( e.propertiesMap ).length )
+  if( _.props.keys( e.propertiesMap ).length )
   {
 
     self.sessionOpenOrCreate();

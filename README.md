@@ -1,5 +1,5 @@
 
-# module::CommandsConfig [![status](https://github.com/Wandalen/wCommandsConfig/workflows/publish/badge.svg)](https://github.com/Wandalen/wCommandsConfig/actions?query=workflow%3Apublish) [![deprecated](https://img.shields.io/badge/stability-deprecated-red.svg)](https://github.com/emersion/stability-badges#deprecated)
+# module::CommandsConfig [![status](https://github.com/Wandalen/wCommandsConfig/actions/workflows/StandardPublish.yml/badge.svg)](https://github.com/Wandalen/wCommandsConfig/actions/workflows/StandardPublish.yml) [![deprecated](https://img.shields.io/badge/stability-deprecated-red.svg)](https://github.com/emersion/stability-badges#deprecated)
 
 Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.
 
@@ -11,7 +11,7 @@ npm install
 node sample/trivial/Sample.s
 ```
 
-## To add to your project
+### To add to your project
 ```
 npm add 'wcommandsconfig@alpha'
 ```

@@ -2,12 +2,9 @@ format: outwillfile-2.0
 root:
   - wCommandsConfig.out
 consistency:
-  ../.ex.will.yml: &ref_0
-    hash: eb4bc9f7dc70dbc7a0265797bbf34f44
-    size: 1799
-  ../.im.will.yml: &ref_1
-    hash: 3e898c9d1f11b78e93b749b5e27194a3
-    size: 5119
+  ../will.yml: &ref_0
+    hash: 4854df944a12fc49f24008d1949b054c
+    size: 6682
 module:
   wCommandsConfig.out:
     about:
@@ -18,18 +15,18 @@ module:
         commands add/remove/delete/set to a class.
       enabled: 1
       version: 0.4.0
-      interpreters: &ref_2
+      license: MIT
+      npm.name: wcommandsconfig
+      author: Kostiantyn Wandalen <wanalen@01.school>
+      keywords: &ref_1
+        - wTools
+      contributors: &ref_2
+        - Kostiantyn Wandalen <wanalen@01.school>
+      interpreters: &ref_3
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords: &ref_3
-        - wTools
-      license: MIT
-      author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: &ref_4
-        - Kostiantyn Wandalen <wanalen@01.school>
-      npm.name: wcommandsconfig
-      npm.scripts: &ref_5
+      npm.scripts: &ref_4
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -44,15 +41,11 @@ module:
       module.original.willfiles:
         criterion:
           predefined: 1
-        path:
-          - ../.ex.will.yml
-          - ../.im.will.yml
+        path: ../will.yml
       module.peer.willfiles:
         criterion:
           predefined: 1
-        path:
-          - ../.ex.will.yml
-          - ../.im.will.yml
+        path: ../will.yml
       module.peer.in:
         criterion:
           predefined: 1
@@ -792,8 +785,7 @@ module:
           content: proto
           export: 1
     consistency:
-      ../.ex.will.yml: *ref_0
-      ../.im.will.yml: *ref_1
+      ../will.yml: *ref_0
   ../:
     about:
       name: wCommandsConfig
@@ -803,26 +795,22 @@ module:
         commands add/remove/delete/set to a class.
       enabled: 1
       version: 0.4.0
-      interpreters: *ref_2
-      keywords: *ref_3
       license: MIT
-      author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors: *ref_4
       npm.name: wcommandsconfig
-      npm.scripts: *ref_5
+      author: Kostiantyn Wandalen <wanalen@01.school>
+      keywords: *ref_1
+      contributors: *ref_2
+      interpreters: *ref_3
+      npm.scripts: *ref_4
     path:
       module.willfiles:
         criterion:
           predefined: 1
-        path:
-          - .ex.will.yml
-          - .im.will.yml
+        path: will.yml
       module.original.willfiles:
         criterion:
           predefined: 1
-        path:
-          - .ex.will.yml
-          - .im.will.yml
+        path: will.yml
       module.peer.willfiles:
         criterion:
           predefined: 1
@@ -1481,9 +1469,6 @@ module:
           - 'build::release'
           - 'build::npm'
     consistency:
-      ../.ex.will.yml:
-        hash: eb4bc9f7dc70dbc7a0265797bbf34f44
-        size: 1799
-      ../.im.will.yml:
-        hash: 3e898c9d1f11b78e93b749b5e27194a3
-        size: 5119
+      ../will.yml:
+        hash: 4854df944a12fc49f24008d1949b054c
+        size: 6682

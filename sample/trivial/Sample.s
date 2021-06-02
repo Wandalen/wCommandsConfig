@@ -2,7 +2,7 @@
 let _ = require( 'wTools' );
 require( 'wcommandsconfig' );
 
-/**/
+/* */
 
 let Self = SampleClass;
 function SampleClass()
@@ -17,11 +17,10 @@ function executable1( e )
 
 function exec()
 {
-
   let Commands =
   {
-    'action first' : { e : executable1, h : 'Some action' },
-  }
+    'action first' : { ro : executable1, h : 'Some action' },
+  };
 
   let ca = _.CommandsAggregator
   ({
@@ -33,15 +32,13 @@ function exec()
   this._commandsConfigAdd( ca );
 
   ca.form();
-  console.log( ca.commands )
-  // ca.exec();
-
+  console.log( _.entity.exportString( ca.vocabulary.phraseMap ) );
 }
 
 let Extend =
 {
   exec,
-}
+};
 
 _.classDeclare
 ({

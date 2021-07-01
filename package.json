@@ -1,22 +1,37 @@
 {
-  "name" : "wcommandsconfig",
-  "version" : "0.3.262",
-  "description" : "Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.",
-  "author" : "Kostiantyn Wandalen <wanalen@01.school>",
-  "license" : "MIT",
-  "main" : "proto/node_modules/wcommandsconfig",
-  "files" : [ "proto/wtools/amid/l7/commands", "out", "proto/node_modules", "proto/node_modules/Tools", "proto/node_modules/wcommandsconfig" ],
-  "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen proto" },
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com/Wandalen/wCommandsConfig.git"
+  "name": "wcommandsconfig",
+  "version": "0.3.263",
+  "description": "Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.",
+  "author": "Kostiantyn Wandalen <wanalen@01.school>",
+  "license": "MIT",
+  "main": "proto/node_modules/wcommandsconfig",
+  "files": [
+    "proto/wtools/amid/l7/commands",
+    "out",
+    "proto/node_modules",
+    "proto/node_modules/Tools",
+    "proto/node_modules/wcommandsconfig"
+  ],
+  "scripts": {
+    "test": "wtest .run 'proto/**' rapidity:-3",
+    "docgen": "wdocgen proto"
   },
-  "bugs" :
-  {
-    "url" : "https://github.com/Wandalen/wCommandsConfig/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wandalen/wCommandsConfig.git"
   },
-  "dependencies" : { "wTools" : "gamma", "wcommandsaggregator" : "gamma" },
-  "devDependencies" : { "eslint" : "7.1.0", "wTesting" : "gamma" },
-  "keywords" : [ "wTools" ]
+  "bugs": {
+    "url": "https://github.com/Wandalen/wCommandsConfig/issues"
+  },
+  "dependencies": {
+    "wTools": "gamma",
+    "wcommandsaggregator": "gamma"
+  },
+  "devDependencies": {
+    "wTesting": "gamma",
+    "eslint": "7.1.0"
+  },
+  "keywords": [
+    "wTools"
+  ]
 }

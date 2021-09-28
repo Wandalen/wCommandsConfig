@@ -1,6 +1,6 @@
 {
   "name": "wcommandsconfig",
-  "version": "0.3.278",
+  "version": "0.3.279",
   "description": "Collection of CLI commands to manage config. Use the module to mixin commands add/remove/delete/set to a class.",
   "author": "Kostiantyn Wandalen <wanalen@01.school>",
   "license": "MIT",
@@ -24,11 +24,11 @@
     "url": "https://github.com/Wandalen/wCommandsConfig/issues"
   },
   "dependencies": {
-    "wTools": "delta",
-    "wcommandsaggregator": "delta"
+    "wTools": "gamma",
+    "wcommandsaggregator": "gamma"
   },
   "devDependencies": {
-    "wTesting": "delta",
+    "wTesting": "gamma",
     "eslint": "7.1.0"
   },
   "keywords": [
